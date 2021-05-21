@@ -1,0 +1,280 @@
+@import 'variables';
+@import 'utilis';
+
+#navbar {
+  color: $secondarycolor;
+  background-color: $background;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+  a {
+    color: $secondarycolor;
+  }
+  .logo {
+    flex-grow: 1;
+    text-align: center;
+  }
+  .serachbar {
+    flex: 2;
+    .search_btn {
+      border: none;
+      margin-left: 1rem;
+      border-radius: 10px;
+      box-shadow: none;
+    }
+    input {
+      padding: 0.7rem;
+      &:hover,
+      &:focus {
+        color: $secondarycolor;
+        background-color: darken($color: $background, $amount: 10);
+        outline: none;
+      }
+    }
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    padding-right: 5rem;
+
+    #Profile {
+      font-size: 16px;
+      background-color: black;
+      border: 2px solid $secondarycolor;
+      cursor: pointer;
+      padding: 0.5rem 1.5rem;
+
+      &:hover {
+        color: $secondarycolor;
+        background-color: $background;
+      }
+    }
+
+    ul {
+      padding: 0rem;
+
+      li {
+        width: fit-content;
+        padding: 0.5rem 2rem;
+        border-bottom: 2px solid $background;
+      }
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: lighten($color: $background, $amount: 30);
+      min-width: fit-content;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    &:hover {
+      .dropdown-content {
+        display: block;
+      }
+    }
+  }
+}
+
+#showcase {
+  margin: 0rem 15rem;
+  background-color: $background;
+  ::-webkit-scrollbar {
+    height: 1px;
+    width: 1px;
+    border: 30px solid $background;
+  }
+  .slidershow {
+    height: 60vh;
+    overflow-x: hidden;
+  }
+  .middle {
+    position: relative;
+  }
+  .navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    .bar {
+      width: 50px;
+      height: 2px;
+      border: 2px solid $background;
+      margin: 6px;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    .bar:hover {
+      background: $background;
+    }
+  }
+
+  .slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    input[name='r'] {
+      position: absolute;
+      visibility: hidden;
+    }
+    .slide {
+      width: 20%;
+      transition: 0.6s;
+      p {
+        padding: 2rem;
+        color: $secondarycolor;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  #r1:checked ~ .s1 {
+    margin-left: 0;
+  }
+  #r2:checked ~ .s1 {
+    margin-left: -20%;
+  }
+  #r3:checked ~ .s1 {
+    margin-left: -40%;
+  }
+  #r4:checked ~ .s1 {
+    margin-left: -60%;
+  }
+  #r5:checked ~ .s1 {
+    margin-left: -80%;
+  }
+}
+#products {
+  width: fit-content;
+  h1 {
+    font-family: cursive;
+  }
+  margin: 3rem 5rem;
+  a {
+    color: black;
+  }
+  .cards {
+    display: grid;
+    width: fit-content;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    .card {
+      padding: 1rem;
+      width: fit-content;
+      border: 1px solid grey;
+      border-radius: 20px;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+      // {
+      //   dark mode
+      //   box-shadow: 0px 10px 10px rgba(18, 1, 253, 0.788);
+      // }
+      text-align: center;
+      img {
+        border-radius: 2rem;
+        width: 15rem;
+        height: 15rem;
+      }
+    }
+  }
+}
+#productDetails {
+  .container {
+    font-family: $secondfontstack;
+    margin: 1rem 5rem;
+  }
+  .product {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+
+    img {
+      width: 35rem;
+      height: 30rem;
+    }
+  }
+}
+
+#reviews {
+  margin: 1rem 2rem;
+  border-top: 2px solid darken($color: $background, $amount: 50);
+  .list {
+    .list-item {
+      display: block;
+      width: 20rem;
+      padding-top: 2rem;
+      padding-right: 20rem;
+      border-bottom: 2px solid lighten($color: $background, $amount: 50);
+    }
+  }
+}
+#Auth {
+  a {
+    color: $background;
+  }
+  .container {
+    padding: 1rem 2rem;
+    border: 2px solid lighten($color: $background, $amount: 50);
+  }
+  .title {
+    display: flex;
+    a {
+      padding: 0rem 1rem;
+    }
+  }
+  .help {
+    a {
+      color: blue;
+      &:last-child {
+        margin-left: 50%;
+      }
+    }
+  }
+}
+
+#order {
+  width: 80vw;
+  display: flex;
+  h1 {
+    font-family: $secondfontstack;
+    color: lighten($color: $background, $amount: 20);
+  }
+  .left {
+    flex: 2;
+
+    .list-item {
+      width: fit-content;
+
+      p {
+        margin: 0rem 2rem;
+      }
+      img {
+        margin: 0rem 2rem;
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+  .right {
+    ul {
+      padding: 2rem;
+      padding-bottom: 0rem;
+      border: 1px solid lighten($color: $background, $amount: 60);
+      li {
+        display: flex;
+        margin: 1.5rem 1rem;
+        border-bottom: 1px solid lighten($color: $background, $amount: 60);
+        justify-content: space-around;
+        span {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
