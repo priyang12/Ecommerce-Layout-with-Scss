@@ -42,6 +42,7 @@ form {
   margin: 1rem;
   padding: 2rem;
   a {
+    text-align: center;
     text-decoration: underline;
     color: darken($color: $secondarycolor, $amount: 80);
   }
@@ -50,9 +51,11 @@ form {
     padding-bottom: 1rem;
     border-bottom: 1px solid lighten($color: $background, $amount: 60);
     width: 80vw;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
+    gap: 0rem;
     img {
       width: 7rem;
       height: 7rem;
@@ -63,13 +66,19 @@ form {
 .btn {
   padding: 1rem 2rem;
   margin: 0.5rem;
-  // margin-top: 0rem;
   border: 2px solid transparent;
+  transition: background-color 1s;
   &:hover {
     color: $secondarycolor;
     background-color: black;
-    border: 2px solid $secondarycolor;
   }
+}
+.btn-gray {
+  padding: 1rem 2rem;
+  width: fit-content;
+  border: 2px solid transparent;
+  background-color: #626d78;
+  color: white;
 }
 .border-bottom {
   padding-bottom: 1rem;
@@ -83,7 +92,7 @@ form {
     margin: 0.5rem;
   }
   select {
-    width: 60px;
+    width: 80px;
     height: 40px;
   }
 }

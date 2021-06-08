@@ -45,6 +45,7 @@ form input:focus {
   padding: 2rem;
 }
 .list a {
+  text-align: center;
   text-decoration: underline;
   color: #333333;
 }
@@ -53,9 +54,11 @@ form input:focus {
   padding-bottom: 1rem;
   border-bottom: 1px solid #ced3d8;
   width: 80vw;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
+  justify-items: center;
+  gap: 0rem;
 }
 .list .list-item img {
   width: 7rem;
@@ -66,11 +69,19 @@ form input:focus {
   padding: 1rem 2rem;
   margin: 0.5rem;
   border: 2px solid transparent;
+  transition: background-color 1s;
 }
 .btn:hover {
   color: white;
   background-color: black;
-  border: 2px solid white;
+}
+
+.btn-gray {
+  padding: 1rem 2rem;
+  width: fit-content;
+  border: 2px solid transparent;
+  background-color: #626d78;
+  color: white;
 }
 
 .border-bottom {
@@ -87,7 +98,7 @@ form input:focus {
   margin: 0.5rem;
 }
 .quntity select {
-  width: 60px;
+  width: 80px;
   height: 40px;
 }
 
@@ -190,7 +201,7 @@ form input:focus {
 }
 
 #showcase {
-  margin: 0rem 15rem;
+  margin: 0rem 20rem;
   background-color: #343a40;
 }
 #showcase ::-webkit-scrollbar {
@@ -264,9 +275,6 @@ form input:focus {
   width: fit-content;
   margin: 3rem 5rem;
 }
-#products h1 {
-  font-family: cursive;
-}
 #products a {
   color: black;
 }
@@ -278,12 +286,19 @@ form input:focus {
   gap: 2rem;
 }
 #products .cards .card {
+  display: grid;
+  grid-template-rows: 1fr;
   padding: 1rem;
   width: fit-content;
-  border: 1px solid grey;
+  text-align: center;
   border-radius: 20px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-  text-align: center;
+  transition: 1s;
+}
+#products .cards .card:hover {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 8px 16px rgba(20, 3, 255, 0.9);
 }
 #products .cards .card img {
   border-radius: 2rem;
@@ -309,7 +324,7 @@ form input:focus {
   margin: 1rem 2rem;
   border-top: 2px solid black;
 }
-#reviews .list .list-item {
+#reviews .review-list .review-list-item {
   display: block;
   width: 20rem;
   padding-top: 2rem;
@@ -348,13 +363,16 @@ form input:focus {
 #order .left {
   flex: 2;
 }
-#order .left .list-item {
+#order .left .list {
+  margin-left: 0rem;
+}
+#order .left .list .list-item {
   width: fit-content;
 }
-#order .left .list-item p {
+#order .left .list .list-item p {
   margin: 0rem 2rem;
 }
-#order .left .list-item img {
+#order .left .list .list-item img {
   margin: 0rem 2rem;
   width: 3rem;
   height: 3rem;
@@ -368,10 +386,202 @@ form input:focus {
   display: flex;
   margin: 1.5rem 1rem;
   border-bottom: 1px solid #ced3d8;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 #order .right ul li span {
   align-self: flex-end;
+}
+
+@media (min-width: 100px) and (max-width: 500px) and (orientation: portrait) {
+  form {
+    margin: 0rem;
+  }
+
+  .list {
+    margin: 0rem;
+  }
+  .list a {
+    text-decoration: underline;
+    color: #333333;
+  }
+  .list .list-item {
+    margin: 1rem auto;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+    justify-items: flex-start;
+  }
+  .list .list-item p {
+    margin: 0%;
+  }
+  .list .list-item img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .list .list-item .btn {
+    width: 30%;
+  }
+
+  .btn {
+    margin: 0rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .quntity {
+    flex-direction: row;
+    padding-bottom: 1rem;
+    padding-top: 0rem;
+  }
+
+  .payments {
+    width: 80%;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+  }
+  #navbar .serachbar {
+    margin: 1rem 0rem;
+  }
+  #navbar .dropdown {
+    padding: 0rem;
+  }
+
+  #Auth .container {
+    border: 6px solid #b2bac1;
+  }
+
+  #showcase {
+    display: none;
+  }
+
+  #products {
+    margin: 5rem auto;
+  }
+  #products .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #order {
+    flex-direction: column;
+  }
+
+  #productDetails .container {
+    margin: 1rem auto;
+  }
+  #productDetails .product {
+    grid-template-columns: 0fr;
+  }
+  #productDetails .product img {
+    width: 20rem;
+    height: 20rem;
+  }
+  #productDetails .product .quntity {
+    flex-direction: column;
+  }
+
+  #reviews {
+    margin: 1rem auto;
+    width: 100vw;
+  }
+  #reviews h1 {
+    text-align: center;
+  }
+  #reviews .review-list {
+    padding-left: 1rem;
+  }
+  #reviews .review-list .review-list-item {
+    padding: 0rem;
+    margin-right: 0rem;
+  }
+}
+@media (min-width: 500px) and (max-height: 500px) {
+  #showcase {
+    display: none;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+  }
+  #navbar .serachbar {
+    margin: 1rem 0rem;
+  }
+  #navbar .dropdown {
+    padding: 0rem;
+  }
+
+  #products {
+    margin: 0rem auto;
+  }
+  #products .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #products .cards .card {
+    border-radius: 10px;
+  }
+  #products .cards .card img {
+    border-radius: 10rem;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  #productDetails .container {
+    margin: 1rem 2rem;
+  }
+  #productDetails .product {
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+  #productDetails .product img {
+    width: 20rem;
+    height: inherit;
+  }
+
+  #reviews .review-list .review-list-item {
+    padding-right: 0rem;
+  }
+
+  .payments {
+    width: 60%;
+  }
+}
+@media (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  #navbar .serachbar {
+    flex: auto;
+  }
+
+  #showcase {
+    display: none;
+  }
+
+  #products {
+    margin: 0rem auto;
+  }
+  #products .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 800px) and (max-width: 1025px) {
+  #showcase {
+    display: none;
+  }
+
+  #products {
+    margin: 0rem auto;
+  }
+  #products .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

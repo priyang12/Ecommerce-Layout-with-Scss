@@ -78,7 +78,7 @@
 }
 
 #showcase {
-  margin: 0rem 15rem;
+  margin: 0rem 20rem;
   background-color: $background;
   ::-webkit-scrollbar {
     height: 1px;
@@ -151,9 +151,7 @@
 }
 #products {
   width: fit-content;
-  h1 {
-    font-family: cursive;
-  }
+
   margin: 3rem 5rem;
   a {
     color: black;
@@ -166,16 +164,19 @@
     grid-template-rows: 1fr;
     gap: 2rem;
     .card {
+      display: grid;
+      grid-template-rows: 1fr;
       padding: 1rem;
       width: fit-content;
-      border: 1px solid grey;
+      text-align: center;
       border-radius: 20px;
       box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-      // {
-      //   dark mode
-      //   box-shadow: 0px 10px 10px rgba(18, 1, 253, 0.788);
-      // }
-      text-align: center;
+      transition: 1s;
+      &:hover {
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0px 8px 16px rgb(20, 3, 255, 0.9);
+      }
       img {
         border-radius: 2rem;
         width: 15rem;
@@ -204,8 +205,8 @@
 #reviews {
   margin: 1rem 2rem;
   border-top: 2px solid darken($color: $background, $amount: 50);
-  .list {
-    .list-item {
+  .review-list {
+    .review-list-item {
       display: block;
       width: 20rem;
       padding-top: 2rem;
@@ -247,17 +248,19 @@
   }
   .left {
     flex: 2;
+    .list {
+      margin-left: 0rem;
+      .list-item {
+        width: fit-content;
 
-    .list-item {
-      width: fit-content;
-
-      p {
-        margin: 0rem 2rem;
-      }
-      img {
-        margin: 0rem 2rem;
-        width: 3rem;
-        height: 3rem;
+        p {
+          margin: 0rem 2rem;
+        }
+        img {
+          margin: 0rem 2rem;
+          width: 3rem;
+          height: 3rem;
+        }
       }
     }
   }
@@ -270,7 +273,7 @@
         display: flex;
         margin: 1.5rem 1rem;
         border-bottom: 1px solid lighten($color: $background, $amount: 60);
-        justify-content: space-around;
+        justify-content: space-between;
         span {
           align-self: flex-end;
         }
@@ -278,3 +281,4 @@
     }
   }
 }
+@import 'media';
