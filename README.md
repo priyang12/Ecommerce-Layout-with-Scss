@@ -3,7 +3,7 @@ Ecommerce Layout with Scss for the mern website
 
 install pakages
 
-npm install
+npm install scss
 
 if you want to change and compile the scss file into css use 
 
