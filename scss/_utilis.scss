@@ -38,6 +38,35 @@ form {
     color: rgb(248, 232, 37);
   }
 }
+.cards {
+  display: grid;
+  width: fit-content;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+
+  .card {
+    display: grid;
+    grid-template-rows: 1fr;
+    padding: 1rem;
+    width: fit-content;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    &:hover {
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0px 8px 16px rgb(20, 3, 255, 0.9);
+    }
+    img {
+      border-radius: 2rem;
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+}
 .list {
   margin: 1rem;
   padding: 2rem;
@@ -83,6 +112,22 @@ form {
 .border-bottom {
   padding-bottom: 1rem;
   border-bottom: 3px solid sandybrown;
+}
+.alert {
+  color: #712b29;
+  background-color: #f7dddc;
+  border-color: #f4cfce;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0rem;
+}
+.success {
+  color: #712b29;
+  background-color: #b7e4c7;
+  border-color: #4bbf73;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0rem;
 }
 .quntity {
   display: flex;

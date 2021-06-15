@@ -13,7 +13,7 @@
       src="https://kit.fontawesome.com/1ce1b2bdd8.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>Order Status</title>
   </head>
   <body>
     <nav id="navbar">
@@ -24,38 +24,33 @@
         <input type="text" placeholder="Search Product" />
         <input type="submit" class="search_btn" />
       </div>
-      <div href="index.html"><i class="fas fa-shopping-cart"></i> CART</div>
+      <a href="AdminDashbord.html" class="AdminIcon"> AdminDashbord</a>
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART</a>
       <ul class="dropdown">
         <a href="Auth.html"><li id="">Register/Login</li></a>
+        <ul class="dropdown-content">
+          <li><a href="">Profile</a></li>
+          <li><a href="">Logout</a></li>
+        </ul>
       </ul>
     </nav>
-    <div id="Auth">
-      <div class="container">
-        <div class="title">
-          <a href="" class="border-bottom"><h1>Login</h1></a>
-          <a href="register.html"><h1>Register</h1></a>
+    <section id="AdminDashbord" class="container">
+      <div class="cards">
+        <div class="card">
+          <a href="AdminUsers.html"> <img src="./images/mouse.jpg" alt="" /></a>
+          <h1 class="card-text">Users</h1>
         </div>
-        <form action="">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            placeholder="Please Enter Your Email"
-            name="email"
-          />
-          <label for="Password">Password</label>
-          <input
-            type="password"
-            placeholder="Enter Your Password"
-            name="password"
-          />
-          <input type="submit" class="btn" />
-        </form>
-        <div class="help">
-          <a href="#">Forget Password /</a>
-          <br />
-          <a href="#"> Need Help</a>
+        <div class="card">
+          <a href="AdminProduct.html">
+            <img src="./images/mouse.jpg" alt=""
+          /></a>
+          <h1 class="card-text">Product</h1>
+        </div>
+        <div class="card">
+          <a href="AdminOrder.html"> <img src="./images/mouse.jpg" alt="" /></a>
+          <h1 class="card-text">Oders</h1>
         </div>
       </div>
-    </div>
+    </section>
   </body>
 </html>

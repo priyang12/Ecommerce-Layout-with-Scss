@@ -41,7 +41,11 @@
   .payments {
     width: 80%;
   }
-
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
   #navbar {
     display: flex;
     flex-direction: column;
@@ -52,6 +56,9 @@
     }
     .dropdown {
       padding: 0rem;
+    }
+    .AdminIcon {
+      margin: 1rem 0rem;
     }
   }
   #Auth {
@@ -64,11 +71,6 @@
   }
   #products {
     margin: 5rem auto;
-    .cards {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
   }
   #order {
     flex-direction: column;
@@ -102,10 +104,32 @@
       }
     }
   }
+  #AdminDashbord {
+    margin: 2rem auto;
+  }
+  #AdminProduct {
+    .product-list {
+      .list {
+        display: block;
+      }
+    }
+  }
 }
 
 //horizontal
 @media (min-width: 500px) and (max-height: 500px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .card {
+      border-radius: 10px;
+      img {
+        border-radius: 10rem;
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+  }
   #showcase {
     display: none;
   }
@@ -120,21 +144,12 @@
     .dropdown {
       padding: 0rem;
     }
+    .AdminIcon {
+      margin: 1rem 0rem;
+    }
   }
   #products {
     margin: 0rem auto;
-    .cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      .card {
-        border-radius: 10px;
-        img {
-          border-radius: 10rem;
-          width: 10rem;
-          height: 10rem;
-        }
-      }
-    }
   }
   #productDetails {
     .container {
@@ -162,30 +177,33 @@
 }
 //ipad
 @media (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
   #navbar {
     .serachbar {
       flex: auto;
     }
+    .AdminIcon {
+      margin: 1rem 0rem;
+    }
   }
   #showcase {
     display: none;
   }
   #products {
     margin: 0rem auto;
-    .cards {
-      grid-template-columns: 1fr 1fr;
-    }
   }
 }
 //  long screen
 @media (min-width: 800px) and (max-width: 1025px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   #showcase {
     display: none;
   }
   #products {
     margin: 0rem auto;
-    .cards {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
   }
 }

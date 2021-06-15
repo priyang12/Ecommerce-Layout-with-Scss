@@ -40,6 +40,34 @@ form input:focus {
   color: #f8e825;
 }
 
+.cards {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+}
+.cards .card {
+  display: grid;
+  grid-template-rows: 1fr;
+  padding: 1rem;
+  width: fit-content;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+.cards .card:hover {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 8px 16px rgba(20, 3, 255, 0.9);
+}
+.cards .card img {
+  border-radius: 2rem;
+  width: 15rem;
+  height: 15rem;
+}
+
 .list {
   margin: 1rem;
   padding: 2rem;
@@ -87,6 +115,24 @@ form input:focus {
 .border-bottom {
   padding-bottom: 1rem;
   border-bottom: 3px solid sandybrown;
+}
+
+.alert {
+  color: #712b29;
+  background-color: #f7dddc;
+  border-color: #f4cfce;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0rem;
+}
+
+.success {
+  color: #712b29;
+  background-color: #b7e4c7;
+  border-color: #4bbf73;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0rem;
 }
 
 .quntity {
@@ -146,6 +192,9 @@ form input:focus {
 #navbar .logo {
   flex-grow: 1;
   text-align: center;
+}
+#navbar .AdminIcon {
+  margin: 0rem 2rem;
 }
 #navbar .serachbar {
   flex: 2;
@@ -217,9 +266,9 @@ form input:focus {
   position: relative;
 }
 #showcase .navigation {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
+  position: relative;
+  bottom: 10%;
+  left: 75%;
   transform: translateX(-50%);
   display: flex;
 }
@@ -233,6 +282,12 @@ form input:focus {
 }
 #showcase .navigation .bar:hover {
   background: #343a40;
+}
+#showcase .navigation i {
+  position: absolute;
+  margin-top: 5px;
+  top: 40%;
+  left: 25%;
 }
 #showcase .slides {
   width: 500%;
@@ -277,33 +332,6 @@ form input:focus {
 }
 #products a {
   color: black;
-}
-#products .cards {
-  display: grid;
-  width: fit-content;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 2rem;
-}
-#products .cards .card {
-  display: grid;
-  grid-template-rows: 1fr;
-  padding: 1rem;
-  width: fit-content;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-  transition: 1s;
-}
-#products .cards .card:hover {
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0px 8px 16px rgba(20, 3, 255, 0.9);
-}
-#products .cards .card img {
-  border-radius: 2rem;
-  width: 15rem;
-  height: 15rem;
 }
 
 #productDetails .container {
@@ -392,6 +420,42 @@ form input:focus {
   align-self: flex-end;
 }
 
+#AdminDashbord {
+  margin: 3rem 15rem;
+  width: fit-content;
+}
+#AdminDashbord a {
+  color: rebeccapurple;
+}
+#AdminDashbord .cards .card:hover {
+  margin-bottom: 2rem;
+  box-shadow: 0px 8px 16px rgba(179, 243, 2, 0.932);
+}
+
+#AdminProduct .product-list .list {
+  display: flex;
+  border-bottom: 1px solid #626d78;
+}
+#AdminProduct .product-list .list .right {
+  width: 80%;
+  height: 80%;
+}
+#AdminProduct .product-list .list .right img {
+  width: inherit;
+  height: inherit;
+}
+#AdminProduct .product-list .list .left {
+  width: 100%;
+  height: 80%;
+}
+#AdminProduct .product-list .list .left .details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#AdminProduct .product-list .list .left .btn {
+  padding: 0.5rem 2rem;
+}
+
 @media (min-width: 100px) and (max-width: 500px) and (orientation: portrait) {
   form {
     margin: 0rem;
@@ -438,6 +502,12 @@ form input:focus {
     width: 80%;
   }
 
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   #navbar {
     display: flex;
     flex-direction: column;
@@ -450,6 +520,9 @@ form input:focus {
   #navbar .dropdown {
     padding: 0rem;
   }
+  #navbar .AdminIcon {
+    margin: 1rem 0rem;
+  }
 
   #Auth .container {
     border: 6px solid #b2bac1;
@@ -461,11 +534,6 @@ form input:focus {
 
   #products {
     margin: 5rem auto;
-  }
-  #products .cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
   }
 
   #order {
@@ -500,8 +568,29 @@ form input:focus {
     padding: 0rem;
     margin-right: 0rem;
   }
+
+  #AdminDashbord {
+    margin: 2rem auto;
+  }
+
+  #AdminProduct .product-list .list {
+    display: block;
+  }
 }
 @media (min-width: 500px) and (max-height: 500px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .cards .card {
+    border-radius: 10px;
+  }
+  .cards .card img {
+    border-radius: 10rem;
+    width: 10rem;
+    height: 10rem;
+  }
+
   #showcase {
     display: none;
   }
@@ -518,21 +607,12 @@ form input:focus {
   #navbar .dropdown {
     padding: 0rem;
   }
+  #navbar .AdminIcon {
+    margin: 1rem 0rem;
+  }
 
   #products {
     margin: 0rem auto;
-  }
-  #products .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  #products .cards .card {
-    border-radius: 10px;
-  }
-  #products .cards .card img {
-    border-radius: 10rem;
-    width: 10rem;
-    height: 10rem;
   }
 
   #productDetails .container {
@@ -556,9 +636,16 @@ form input:focus {
   }
 }
 @media (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
   #navbar .serachbar {
     flex: auto;
   }
+  #navbar .AdminIcon {
+    margin: 1rem 0rem;
+  }
 
   #showcase {
     display: none;
@@ -566,21 +653,19 @@ form input:focus {
 
   #products {
     margin: 0rem auto;
-  }
-  #products .cards {
-    grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 800px) and (max-width: 1025px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   #showcase {
     display: none;
   }
 
   #products {
     margin: 0rem auto;
-  }
-  #products .cards {
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
