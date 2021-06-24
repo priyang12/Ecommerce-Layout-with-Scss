@@ -10,3 +10,7 @@ if you want to change and compile the scss file into css use
 sass --watch scss/style.scss dist/css/main.css
 
 The Landing page is index.html
+
+
+![alt text](https://github.com/priyang12/Crop-and-Upload-image-React/blob/master/public/Screenshot.png)
+
