@@ -53,9 +53,14 @@
     justify-content: end;
     .serachbar {
       margin: 1rem 0rem;
+      display: flex;
     }
     .dropdown {
       padding: 0rem;
+      .dropdown-content {
+        right: 0%;
+        left: 20%;
+      }
     }
     .AdminIcon {
       margin: 1rem 0rem;
@@ -143,6 +148,10 @@
     }
     .dropdown {
       padding: 0rem;
+      .dropdown-content {
+        right: 0%;
+        left: 20%;
+      }
     }
     .AdminIcon {
       margin: 1rem 0rem;
@@ -205,5 +214,26 @@
   }
   #products {
     margin: 0rem auto;
+  }
+}
+// medium
+@media (min-width: 500px) and (max-width: 799px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #navbar .AdminIcon {
+    margin: 1rem 0rem;
+  }
+  #showcase {
+    display: none;
+  }
+
+  #AdminDashbord {
+    margin: 3rem auto;
   }
 }

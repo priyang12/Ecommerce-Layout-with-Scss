@@ -28,6 +28,24 @@ form input:focus {
   outline: none;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .container {
   margin: 1rem auto;
   width: fit-content;
@@ -51,7 +69,7 @@ form input:focus {
   display: grid;
   grid-template-rows: 1fr;
   padding: 1rem;
-  width: fit-content;
+  width: auto;
   text-align: center;
   border-radius: 20px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
@@ -215,48 +233,40 @@ form input:focus {
 }
 #navbar .dropdown {
   position: relative;
-  display: inline-block;
   padding-right: 5rem;
-}
-#navbar .dropdown #Profile {
-  font-size: 16px;
-  background-color: black;
-  border: 2px solid white;
-  cursor: pointer;
-  padding: 0.5rem 1.5rem;
-}
-#navbar .dropdown #Profile:hover {
-  color: white;
-  background-color: #343a40;
-}
-#navbar .dropdown ul {
-  padding: 0rem;
-}
-#navbar .dropdown ul li {
-  width: fit-content;
-  padding: 0.5rem 2rem;
-  border-bottom: 2px solid #343a40;
+  display: flex;
 }
 #navbar .dropdown .dropdown-content {
   display: none;
   position: absolute;
+  top: 50%;
+  right: 20%;
+  padding: 0rem;
   background-color: #7a8793;
   min-width: fit-content;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 20px;
 }
-#navbar .dropdown:hover .dropdown-content {
+#navbar .dropdown .dropdown-content li {
+  width: fit-content;
+  padding: 0.5rem 2rem;
+  border-bottom: 2px solid #343a40;
+  border-radius: 20px;
+}
+#navbar .dropdown button {
+  margin: 0rem 0.5rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+#navbar .dropdown button:focus ~ .dropdown-content {
   display: block;
 }
 
 #showcase {
   margin: 0rem 20rem;
   background-color: #343a40;
-}
-#showcase ::-webkit-scrollbar {
-  height: 1px;
-  width: 1px;
-  border: 30px solid #343a40;
 }
 #showcase .slidershow {
   height: 60vh;
@@ -516,9 +526,14 @@ form input:focus {
   }
   #navbar .serachbar {
     margin: 1rem 0rem;
+    display: flex;
   }
   #navbar .dropdown {
     padding: 0rem;
+  }
+  #navbar .dropdown .dropdown-content {
+    right: 0%;
+    left: 20%;
   }
   #navbar .AdminIcon {
     margin: 1rem 0rem;
@@ -607,6 +622,10 @@ form input:focus {
   #navbar .dropdown {
     padding: 0rem;
   }
+  #navbar .dropdown .dropdown-content {
+    right: 0%;
+    left: 20%;
+  }
   #navbar .AdminIcon {
     margin: 1rem 0rem;
   }
@@ -666,6 +685,28 @@ form input:focus {
 
   #products {
     margin: 0rem auto;
+  }
+}
+@media (min-width: 500px) and (max-width: 799px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbar .AdminIcon {
+    margin: 1rem 0rem;
+  }
+
+  #showcase {
+    display: none;
+  }
+
+  #AdminDashbord {
+    margin: 3rem auto;
   }
 }
 
