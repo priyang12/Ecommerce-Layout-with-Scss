@@ -1,0 +1,29 @@
+#products {
+  text-align: center;
+  background-color: darken($color: $background, $amount: 10);
+  color: aliceblue;
+  margin: 0;
+  h1 {
+    margin: 0;
+    font-size: 4rem;
+    padding: 1em;
+  }
+  a {
+    color: black;
+  }
+
+  .cards {
+    @extend .cardsDashboard;
+    max-width: 90%;
+    width: 90%;
+    .card {
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+      transition: 0.8s all ease;
+      border-radius: 10px;
+    }
+    &:hover {
+      margin-bottom: 3em;
+      box-shadow: 0px 8px 16px rgb(20, 3, 255, 0.9);
+    }
+  }
+}

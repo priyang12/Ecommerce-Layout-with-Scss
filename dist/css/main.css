@@ -5,7 +5,7 @@
 html,
 body {
   list-style: none;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   margin: 0;
 }
@@ -17,15 +17,65 @@ a {
 form {
   display: flex;
   flex-direction: column;
-  margin: 2rem 0rem;
 }
-form input {
-  margin: 0.5rem 0rem;
-  padding: 1rem;
+form .form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em 0em;
+  position: relative;
 }
-form input:focus {
+form .form-control .bar {
+  transition: all 0.8s ease;
+}
+form .form-control label {
+  font-size: 0.8rem;
+  position: absolute;
+  margin-left: 1.5em;
+  transition: all 0.5s ease;
+}
+form .form-control input {
+  font-size: 1rem;
+  padding: 1em;
+}
+form .form-control input:focus {
   border: 4px solid #ced3d8;
   outline: none;
+}
+form .form-control input:valid ~ label {
+  margin-bottom: 5rem;
+}
+form .form-control input:focus ~ .bar {
+  height: 5px;
+  background-color: #333;
+}
+form input[type=submit] {
+  margin: auto;
+}
+
+.cardsDashboard, #products .cards {
+  display: grid;
+  width: 100%;
+  margin: auto;
+  padding: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  grid-template-rows: 1fr;
+  gap: 2rem;
+}
+.cardsDashboard .card, #products .cards .card {
+  display: grid;
+  grid-auto-flow: row;
+  background-color: #b2bac1;
+  grid-auto-columns: minmax(0, 1fr);
+  align-items: center;
+  padding: 1rem;
+}
+.cardsDashboard .card .CardTitle, #products .cards .card .CardTitle {
+  overflow: hidden;
+}
+.cardsDashboard .card img, #products .cards .card img {
+  border-radius: 5%;
+  width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -48,7 +98,7 @@ form input:focus {
 
 .container {
   margin: 1rem auto;
-  width: fit-content;
+  width: 100%;
 }
 
 .star-review {
@@ -56,34 +106,6 @@ form input:focus {
 }
 .star-review .stars {
   color: #f8e825;
-}
-
-.cards {
-  display: grid;
-  width: fit-content;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 2rem;
-}
-.cards .card {
-  display: grid;
-  grid-template-rows: 1fr;
-  padding: 1rem;
-  width: auto;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-  transition: 1s;
-}
-.cards .card:hover {
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0px 8px 16px rgba(20, 3, 255, 0.9);
-}
-.cards .card img {
-  border-radius: 2rem;
-  width: 15rem;
-  height: 15rem;
 }
 
 .list {
@@ -131,8 +153,8 @@ form input:focus {
 }
 
 .border-bottom {
-  padding-bottom: 1rem;
-  border-bottom: 3px solid sandybrown;
+  border-bottom: 4px solid sandybrown;
+  border-radius: 5px;
 }
 
 .alert {
@@ -264,86 +286,6 @@ form input:focus {
   display: block;
 }
 
-#showcase {
-  margin: 0rem 20rem;
-  background-color: #343a40;
-}
-#showcase .slidershow {
-  height: 60vh;
-  overflow-x: hidden;
-}
-#showcase .middle {
-  position: relative;
-}
-#showcase .navigation {
-  position: relative;
-  bottom: 10%;
-  left: 75%;
-  transform: translateX(-50%);
-  display: flex;
-}
-#showcase .navigation .bar {
-  width: 50px;
-  height: 2px;
-  border: 2px solid #343a40;
-  margin: 6px;
-  cursor: pointer;
-  transition: 0.4s;
-}
-#showcase .navigation .bar:hover {
-  background: #343a40;
-}
-#showcase .navigation i {
-  position: absolute;
-  margin-top: 5px;
-  top: 40%;
-  left: 25%;
-}
-#showcase .slides {
-  width: 500%;
-  height: 100%;
-  display: flex;
-}
-#showcase .slides input[name=r] {
-  position: absolute;
-  visibility: hidden;
-}
-#showcase .slides .slide {
-  width: 20%;
-  transition: 0.6s;
-}
-#showcase .slides .slide p {
-  padding: 2rem;
-  color: white;
-}
-#showcase .slides img {
-  width: 100%;
-  height: 100%;
-}
-#showcase #r1:checked ~ .s1 {
-  margin-left: 0;
-}
-#showcase #r2:checked ~ .s1 {
-  margin-left: -20%;
-}
-#showcase #r3:checked ~ .s1 {
-  margin-left: -40%;
-}
-#showcase #r4:checked ~ .s1 {
-  margin-left: -60%;
-}
-#showcase #r5:checked ~ .s1 {
-  margin-left: -80%;
-}
-
-#products {
-  width: fit-content;
-  margin: 3rem 5rem;
-}
-#products a {
-  color: black;
-}
-
 #productDetails .container {
   font-family: "Nunito Sans";
   margin: 1rem 5rem;
@@ -368,26 +310,6 @@ form input:focus {
   padding-top: 2rem;
   padding-right: 20rem;
   border-bottom: 2px solid #b2bac1;
-}
-
-#Auth a {
-  color: #343a40;
-}
-#Auth .container {
-  padding: 1rem 2rem;
-  border: 2px solid #b2bac1;
-}
-#Auth .title {
-  display: flex;
-}
-#Auth .title a {
-  padding: 0rem 1rem;
-}
-#Auth .help a {
-  color: blue;
-}
-#Auth .help a:last-child {
-  margin-left: 50%;
 }
 
 #order {
@@ -512,12 +434,6 @@ form input:focus {
     width: 80%;
   }
 
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
   #navbar {
     display: flex;
     flex-direction: column;
@@ -593,19 +509,6 @@ form input:focus {
   }
 }
 @media (min-width: 500px) and (max-height: 500px) {
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .cards .card {
-    border-radius: 10px;
-  }
-  .cards .card img {
-    border-radius: 10rem;
-    width: 10rem;
-    height: 10rem;
-  }
-
   #showcase {
     display: none;
   }
@@ -655,10 +558,6 @@ form input:focus {
   }
 }
 @media (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
   #navbar .serachbar {
     flex: auto;
   }
@@ -675,10 +574,6 @@ form input:focus {
   }
 }
 @media (min-width: 800px) and (max-width: 1025px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   #showcase {
     display: none;
   }
@@ -688,10 +583,6 @@ form input:focus {
   }
 }
 @media (min-width: 500px) and (max-width: 799px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
   #navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -708,6 +599,160 @@ form input:focus {
   #AdminDashbord {
     margin: 3rem auto;
   }
+}
+#Auth {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+#Auth .container {
+  padding: 1rem 2rem;
+  border: 2px solid #b2bac1;
+  position: relative;
+}
+#Auth .container::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  background-color: #80d8e4;
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+#Auth .container::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  background-color: #002227;
+  clip-path: polygon(0 0, 100% 0, 34% 51%, 100% 100%, 0 100%);
+}
+#Auth form {
+  padding: 1em 0;
+}
+#Auth a {
+  color: #002227;
+}
+#Auth .title {
+  display: flex;
+}
+#Auth .title a {
+  padding: 0rem 1rem;
+}
+#Auth .help {
+  color: white;
+  text-align: center;
+}
+#Auth .help a {
+  color: #1894a7;
+}
+#Auth .help a:hover {
+  border-bottom: 3px solid #80d8e4;
+}
+
+#products {
+  text-align: center;
+  background-color: #1d2124;
+  color: aliceblue;
+  margin: 0;
+}
+#products h1 {
+  margin: 0;
+  font-size: 4rem;
+  padding: 1em;
+}
+#products a {
+  color: black;
+}
+#products .cards {
+  max-width: 90%;
+  width: 90%;
+}
+#products .cards .card {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.8s all ease;
+  border-radius: 10px;
+}
+#products .cards:hover {
+  margin-bottom: 3em;
+  box-shadow: 0px 8px 16px rgba(20, 3, 255, 0.9);
+}
+
+#showcase {
+  margin: 0rem 20rem;
+  background-color: #343a40;
+}
+#showcase .slidershow {
+  height: 60vh;
+  overflow-x: hidden;
+}
+#showcase .middle {
+  position: relative;
+}
+#showcase .navigation {
+  position: relative;
+  bottom: 10%;
+  left: 75%;
+  transform: translateX(-50%);
+  display: flex;
+}
+#showcase .navigation .bar {
+  width: 50px;
+  height: 2px;
+  border: 2px solid #343a40;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#showcase .navigation .bar:hover {
+  background: #343a40;
+}
+#showcase .navigation i {
+  position: absolute;
+  margin-top: 5px;
+  top: 40%;
+  left: 25%;
+}
+#showcase .slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+#showcase .slides input[name=r] {
+  position: absolute;
+  visibility: hidden;
+}
+#showcase .slides .slide {
+  width: 20%;
+  transition: 0.6s;
+}
+#showcase .slides .slide p {
+  padding: 2rem;
+  color: white;
+}
+#showcase .slides img {
+  width: 100%;
+  height: 100%;
+}
+#showcase #r1:checked ~ .s1 {
+  margin-left: 0;
+}
+#showcase #r2:checked ~ .s1 {
+  margin-left: -20%;
+}
+#showcase #r3:checked ~ .s1 {
+  margin-left: -40%;
+}
+#showcase #r4:checked ~ .s1 {
+  margin-left: -60%;
+}
+#showcase #r5:checked ~ .s1 {
+  margin-left: -80%;
 }
 
 /*# sourceMappingURL=main.css.map */

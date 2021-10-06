@@ -16,49 +16,41 @@
     <title>Document</title>
   </head>
   <body>
-    <nav id="navbar">
-      <div class="logo">
-        <a href="index.html"><h1>PROSHOP</h1></a>
-      </div>
-      <div class="serachbar">
-        <input type="text" placeholder="Search Product" />
-        <input type="submit" class="search_btn" />
-      </div>
-      <div href="index.html"><i class="fas fa-shopping-cart"></i> CART</div>
-      <ul class="dropdown">
-        <a href="Auth.html"><li id="">Register/Login</li></a>
-      </ul>
-    </nav>
     <div id="Auth">
       <div class="container">
         <div class="title">
-          <a href="Auth.html"><h1>Login</h1></a>
+          <a href="Login.html"><h1>Login</h1></a>
           <a href="" class="border-bottom"><h1>Register</h1></a>
         </div>
         <form action="">
-          <label for="email">Name</label>
-          <input type="text" placeholder="Please Enter Your Name" name="name" />
-          <label for="email">Email Address</label>
-          <input
-            type="email"
-            placeholder="Please Enter Your Email"
-            name="email"
-          />
-          <label for="Password">Password</label>
-          <input
-            type="password"
-            placeholder="Enter Your Password"
-            name="password"
-          />
-          <input
-            type="password"
-            placeholder="Confirm Your Password"
-            name="confirmPassword"
-          />
+          <div class="form-control">
+            <input type="text" name="name" required />
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="email">Name</label>
+          </div>
+          <div class="form-control">
+            <input type="text" name="email" required />
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="email">Please Enter Your Email</label>
+          </div>
+          <div class="form-control">
+            <input type="password" name="password" required />
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="Password">Enter Your Password</label>
+          </div>
+          <div class="form-control">
+            <input type="password" name="confirmPassword" required />
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="confirmPassword">Confirm Your Password</label>
+          </div>
           <input type="submit" class="btn" />
         </form>
         <div class="help">
-          <span>alreday have a Account/</span>
+          <span>Already have a Account/</span>
           <a href="#"> Login here</a>
           <br />
           <a href="#"> Need Help</a>

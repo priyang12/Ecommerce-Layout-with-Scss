@@ -41,11 +41,6 @@
   .payments {
     width: 80%;
   }
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
   #navbar {
     display: flex;
     flex-direction: column;
@@ -123,18 +118,6 @@
 
 //horizontal
 @media (min-width: 500px) and (max-height: 500px) {
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    .card {
-      border-radius: 10px;
-      img {
-        border-radius: 10rem;
-        width: 10rem;
-        height: 10rem;
-      }
-    }
-  }
   #showcase {
     display: none;
   }
@@ -186,9 +169,6 @@
 }
 //ipad
 @media (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
   #navbar {
     .serachbar {
       flex: auto;
@@ -206,9 +186,6 @@
 }
 //  long screen
 @media (min-width: 800px) and (max-width: 1025px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
   #showcase {
     display: none;
   }
@@ -218,10 +195,6 @@
 }
 // medium
 @media (min-width: 500px) and (max-width: 799px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
   #navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -232,7 +205,6 @@
   #showcase {
     display: none;
   }
-
   #AdminDashbord {
     margin: 3rem auto;
   }
