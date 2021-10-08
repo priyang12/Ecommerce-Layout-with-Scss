@@ -1,29 +1,41 @@
 #products {
   text-align: center;
-  background-color: darken($color: $background, $amount: 10);
+  background-color: darken($color: $PrimaryColor, $amount: 10);
+  background: url('../images/circle-scatter-haikei.svg') repeat center/cover;
+  height: 100vh;
+  min-height: 1500px;
   color: aliceblue;
   margin: 0;
   h1 {
+    font-family: cursive;
     margin: 0;
-    font-size: 4rem;
+    font-size: clamp(1.913rem, calc(12px + 2.475vw), 2.587rem);
     padding: 1em;
   }
-  a {
-    color: black;
-  }
-
   .cards {
     @extend .cardsDashboard;
+    backdrop-filter: blur(8px) saturate(142%);
+    -webkit-backdrop-filter: blur(8px) saturate(142%);
+    background-color: set-bgcolor($PrimaryColor);
+    border: 1px solid rgba(255, 255, 255, 0.125);
     max-width: 90%;
     width: 90%;
     .card {
       box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
       transition: 0.8s all ease;
       border-radius: 10px;
-    }
-    &:hover {
-      margin-bottom: 3em;
-      box-shadow: 0px 8px 16px rgb(20, 3, 255, 0.9);
+      color: $AssetColor;
+      background-color: lighten($color: $secondarycolor, $amount: 15);
+      // background-color: $AssetColor;
+      // color: $secondarycolor;
+      a {
+        color: darken($color: $secondarycolor, $amount: 50);
+        // color: lighten($color: $secondarycolor, $amount: 50);
+        font-size: 1.5rem;
+      }
+      &:hover {
+        box-shadow: 0px 8px 16px $PrimaryColor;
+      }
     }
   }
 }

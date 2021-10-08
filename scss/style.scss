@@ -1,150 +1,6 @@
 @import 'variables';
 @import 'utilis';
 
-#navbar {
-  color: $secondarycolor;
-  background-color: $background;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 0.5rem 1rem;
-  flex-wrap: wrap;
-  a {
-    color: $secondarycolor;
-  }
-  .logo {
-    flex-grow: 1;
-    text-align: center;
-  }
-  .AdminIcon {
-    margin: 0rem 2rem;
-  }
-  .serachbar {
-    flex: 2;
-    .search_btn {
-      border: none;
-      margin-left: 1rem;
-      border-radius: 10px;
-      box-shadow: none;
-    }
-    input {
-      padding: 0.7rem;
-      &:hover,
-      &:focus {
-        color: $secondarycolor;
-        background-color: darken($color: $background, $amount: 10);
-        outline: none;
-      }
-    }
-  }
-  .dropdown {
-    position: relative;
-    padding-right: 5rem;
-    display: flex;
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 50%;
-      right: 20%;
-      padding: 0rem;
-      background-color: lighten($color: $background, $amount: 30);
-      min-width: fit-content;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-      border-radius: 20px;
-      li {
-        width: fit-content;
-        padding: 0.5rem 2rem;
-        border-bottom: 2px solid $background;
-        border-radius: 20px;
-      }
-    }
-    button {
-      margin: 0rem 0.5rem;
-      background-color: transparent;
-      color: $secondarycolor;
-      border: none;
-      &:focus ~ .dropdown-content {
-        display: block;
-      }
-    }
-  }
-}
-
-#productDetails {
-  .container {
-    font-family: $secondfontstack;
-    margin: 1rem 5rem;
-  }
-  .product {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 1rem;
-
-    img {
-      width: 35rem;
-      height: 30rem;
-    }
-  }
-}
-
-#reviews {
-  margin: 1rem 2rem;
-  border-top: 2px solid darken($color: $background, $amount: 50);
-  .review-list {
-    .review-list-item {
-      display: block;
-      width: 20rem;
-      padding-top: 2rem;
-      padding-right: 20rem;
-      border-bottom: 2px solid lighten($color: $background, $amount: 50);
-    }
-  }
-}
-
-#order {
-  width: 80vw;
-  display: flex;
-  h1 {
-    font-family: $secondfontstack;
-    color: lighten($color: $background, $amount: 20);
-  }
-  .left {
-    flex: 2;
-    .list {
-      margin-left: 0rem;
-      .list-item {
-        width: fit-content;
-
-        p {
-          margin: 0rem 2rem;
-        }
-        img {
-          margin: 0rem 2rem;
-          width: 3rem;
-          height: 3rem;
-        }
-      }
-    }
-  }
-  .right {
-    ul {
-      padding: 2rem;
-      padding-bottom: 0rem;
-      border: 1px solid lighten($color: $background, $amount: 60);
-      li {
-        display: flex;
-        margin: 1.5rem 1rem;
-        border-bottom: 1px solid lighten($color: $background, $amount: 60);
-        justify-content: space-between;
-        span {
-          align-self: flex-end;
-        }
-      }
-    }
-  }
-}
-
 #AdminDashbord {
   margin: 3rem 15rem;
   width: fit-content;
@@ -165,7 +21,7 @@
     .list {
       display: flex;
 
-      border-bottom: 1px solid lighten($color: $background, $amount: 20);
+      border-bottom: 1px solid lighten($color: $PrimaryColor, $amount: 20);
       .right {
         width: 80%;
         height: 80%;
@@ -192,6 +48,12 @@
   }
 }
 @import 'media';
+@import 'navbar';
 @import 'Auth';
-@import 'products';
 @import 'carsoul';
+@import 'products';
+@import 'productDetails';
+@import 'review';
+@import 'cart';
+@import 'paymentProcess';
+@import 'order';

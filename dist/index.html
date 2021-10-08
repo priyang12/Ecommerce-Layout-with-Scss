@@ -16,19 +16,29 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+
     <nav id="navbar">
       <div class="logo">
-        <a href="index.html"><h1>PROSHOP</h1></a>
+        <a href="index.html"><h1>SHOP-IT</h1></a>
       </div>
       <div class="serachbar">
         <input type="text" placeholder="Search Product" />
         <input type="submit" class="search_btn" />
       </div>
 
-      <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART</a>
-      <a href="AdminDashbord.html" class="AdminIcon"> AdminDashbord</a>
-      <!-- <a href="Auth.html"><li id="">Register/Login /</li></a> -->
-      <div class="dropdown">
+      <div class="links">
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART</a>
+      </div>
+      <div class="links">
+        <a href="AdminDashbord.html"> AdminDashbord</a>
+      </div>
+      <!-- <div class="links">
+
+        <a href="Auth.html"><li id="">Register/Login /</li></a>
+      </div> -->
+      <div class="dropdown-btn">
         <div>user.name</div>
         <button><i class="fas fa-caret-down"></i></button>
         <ul class="dropdown-content">
@@ -38,79 +48,37 @@
         </ul>
       </div>
     </nav>
+
     <!-- //////////////////////////////////////////////////////////////////////// -->
     <!-- //////////////////////////////////////////////////////////////////////// -->
-    <!-- //////////////////////////////////////////////////////////////////////// -->
-
-    <section id="showcase">
-      <div class="container">
-        <div class="slidershow middle">
-          <div class="slides">
-            <input type="radio" name="r" id="r1" checked />
-            <input type="radio" name="r" id="r2" />
-            <input type="radio" name="r" id="r3" />
-            <input type="radio" name="r" id="r4" />
-            <input type="radio" name="r" id="r5" />
-            <div class="slide s1">
-              <a href="prodocut.html"
-                ><img src="./images/airpods.jpg" alt=""
-              /></a>
-
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-                dignissimos, quia ea eaque laudantium numquam corporis odit,
-                molestias unde quidem, officia dolorum maxime consequuntur
-                incidunt sunt esse neque iure laborum.
-              </p>
-            </div>
-            <div class="slide">
-              <img src="./images/phone.jpg" alt="" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-                dignissimos, quia ea eaque laudantium numquam corporis odit,
-                molestias unde quidem, officia dolorum maxime consequuntur
-                incidunt sunt esse neque iure laborum.
-              </p>
-            </div>
-            <div class="slide">
-              <img src="./images/mouse.jpg" alt="" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-                dignissimos, quia ea eaque laudantium numquam corporis odit,
-                molestias unde quidem, officia dolorum maxime consequuntur
-                incidunt sunt esse neque iure laborum.
-              </p>
-            </div>
-            <div class="slide">
-              <img src="./images/camera.jpg" alt="" />
-            </div>
-            <div class="slide">
-              <img src="./images/alexa.jpg" alt="" />
-            </div>
-          </div>
-
-          <div class="navigation">
-            <label for="r1" class="bar"></label>
-            <label for="r2" class="bar"></label>
-            <label for="r3" class="bar"></label>
-            <label for="r4" class="bar"></label>
-            <label for="r5" class="bar"></label>
-            <p><i class="fas fa-chevron-circle-down"></i></p>
+    <div class="container">
+      <div id="carsoul">
+        <div class="selectors" id="left">
+          <i class="fas fa-angle-double-left"></i>
+        </div>
+        <div class="slides">
+          <div class="slide" id="slide">
+            <img src="../dist/images/airpods.jpg" alt="Airpods" />
           </div>
         </div>
+        <div class="selectors" id="right">
+          <i class="fas fa-angle-double-right"></i>
+        </div>
       </div>
-    </section>
+    </div>
+
     <!-- //////////////////////////////////////////////////////////////////////// -->
     <!-- //////////////////////////////////////////////////////////////////////// -->
-    <!-- //////////////////////////////////////////////////////////////////////// -->
-    <!-- //////////////////////////////////////////////////////////////////////// -->
-    <!-- //////////////////////////////////////////////////////////////////////// -->
-    <section id="products" style="display: none">
+    <section id="products">
       <h1>Product Display</h1>
       <div class="cards">
         <div class="card">
-          <a href="prodocut.html"><h4 class="CardTitle">Product Name</h4></a>
-          <a href="prodocut.html"> <img src="./images/mouse.jpg" alt="" /></a>
+          <a href="productDetails.html"
+            ><h4 class="CardTitle">Product Name</h4></a
+          >
+          <a href="productDetails.html">
+            <img src="./images/mouse.jpg" alt=""
+          /></a>
           <div class="star-review">
             <span class="stars"
               ><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -127,7 +95,9 @@
               Looooooooooonoooooooooooooooooooooog Product Name
             </h4></a
           >
-          <a href="prodocut.html"><img src="./images/airpods.jpg" alt="" /></a>
+          <a href="productDetails.html"
+            ><img src="./images/airpods.jpg" alt=""
+          /></a>
           <div class="star-review">
             <span class="stars"
               ><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -140,7 +110,9 @@
         </div>
         <div class="card">
           <a href=""><h4 class="CardTitle">Product Name</h4></a>
-          <a href="prodocut.html"><img src="./images/alexa.jpg" alt="" /></a>
+          <a href="productDetails.html"
+            ><img src="./images/alexa.jpg" alt=""
+          /></a>
           <div class="star-review">
             <span class="stars"
               ><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -153,7 +125,9 @@
         </div>
         <div class="card">
           <a href=""><h4 class="CardTitle">Product Name</h4></a>
-          <a href="prodocut.html"> <img src="./images/phone.jpg" alt="" /></a>
+          <a href="productDetails.html">
+            <img src="./images/phone.jpg" alt=""
+          /></a>
           <div class="star-review">
             <span class="stars"
               ><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -166,7 +140,9 @@
         </div>
         <div class="card">
           <a href=""><h4 class="CardTitle">Product Name</h4></a>
-          <a href="prodocut.html"> <img src="./images/phone.jpg" alt="" /></a>
+          <a href="productDetails.html">
+            <img src="./images/phone.jpg" alt=""
+          /></a>
           <div class="star-review">
             <span class="stars"
               ><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -179,5 +155,9 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="main-footer">@Priyang Patel</div>
+    </footer>
   </body>
+  <script src="./js/Carsoul.js"></script>
 </html>

@@ -1,0 +1,26 @@
+#cart {
+  .container {
+    max-width: 100ch;
+  }
+  .Product-list {
+    padding: 2rem 0;
+    width: 100%;
+    .Product-list-item {
+      justify-content: space-between;
+      align-items: center;
+      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+      .quntity {
+        flex-direction: row;
+      }
+    }
+  }
+  .checkout {
+    background-color: $secondarycolor;
+    max-width: 30ch;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 1em;
+    color: darken($color: $PrimaryColor, $amount: 10);
+  }
+}

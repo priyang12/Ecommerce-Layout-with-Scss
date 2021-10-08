@@ -16,40 +16,38 @@
     <title>Document</title>
   </head>
   <body>
-    <nav id="navbar">
-      <div class="logo">
-        <a href="index.html"><h1>PROSHOP</h1></a>
-      </div>
-      <div class="serachbar">
-        <input type="text" placeholder="Search Product" />
-        <input type="submit" class="search_btn" />
-      </div>
-      <a href="index.html"><i class="fas fa-shopping-cart"></i> CART</a>
-      <ul class="dropdown">
-        <li id="Profile">Name</li>
-        <ul class="dropdown-content">
-          <li><a href="">Profile</a></li>
-          <li><a href="">Logout</a></li>
-        </ul>
-      </ul>
-    </nav>
-    <section class="container payments" id="shipping">
+    <section class="container payments">
       <ul class="links">
-        <li class="border-bottom">Shipping</li>
+        <li class="Link-border">Shipping</li>
         <li>Payment</li>
         <li>Place Order</li>
       </ul>
-      <h1>SHIPPING</h1>
       <form action="">
-        <label for="address">Address</label>
-        <input type="text" name="address" />
-        <label for="city">City</label>
-        <input type="text" name="city" />
-        <label for="postalCode">Postal Code</label>
-        <input type="text" name="postalCode" />
-        <label for="country">Country</label>
-        <input type="text" name="country" />
-
+        <h1>SHIPPING</h1>
+        <div class="form-control">
+          <input type="text" name="address" required />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label for="address">Address</label>
+        </div>
+        <div class="form-control">
+          <input type="text" name="city" required />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label for="city">City</label>
+        </div>
+        <div class="form-control">
+          <input type="text" name="postalCode" required />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label for="postalCode">Postal Code</label>
+        </div>
+        <div class="form-control">
+          <input type="text" name="country" required />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label for="country">Country</label>
+        </div>
         <input type="submit" class="btn" value="Continue" />
         <a href="payment.html">next Link</a>
       </form>

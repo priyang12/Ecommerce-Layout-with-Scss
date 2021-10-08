@@ -18,30 +18,42 @@
   <body>
     <nav id="navbar">
       <div class="logo">
-        <a href="index.html"><h1>PROSHOP</h1></a>
+        <a href="index.html"><h1>SHOP-IT</h1></a>
       </div>
       <div class="serachbar">
         <input type="text" placeholder="Search Product" />
         <input type="submit" class="search_btn" />
       </div>
-      <a href="index.html"><i class="fas fa-shopping-cart"></i> CART</a>
-      <ul class="dropdown">
-        <li id="Profile">Name</li>
+
+      <div class="links">
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART</a>
+      </div>
+      <div class="links">
+        <a href="AdminDashbord.html"> AdminDashbord</a>
+      </div>
+      <!-- <div class="links">
+
+        <a href="Auth.html"><li id="">Register/Login /</li></a>
+      </div> -->
+      <div class="dropdown-btn">
+        <div>user.name</div>
+        <button><i class="fas fa-caret-down"></i></button>
         <ul class="dropdown-content">
           <li><a href="">Profile</a></li>
+          <li><a href="./Orderstaus.html">Order</a></li>
           <li><a href="">Logout</a></li>
         </ul>
-      </ul>
+      </div>
     </nav>
     <div class="container payments">
       <ul class="links">
         <li><a href="shipping.html">Shipping</a></li>
         <li><a href="payment.html">Payment</a></li>
-        <li class="border-bottom">Place Order</li>
+        <li class="Link-border">Place Order</li>
       </ul>
     </div>
     <section class="container" id="order">
-      <div class="left">
+      <div class="OrderDetails">
         <div class="detail">
           <h1>SHIPPING</h1>
           <p>Address: dfdf dfdf, dfdf</p>
@@ -50,15 +62,15 @@
           <h1>PAYMENT METHOD</h1>
           <p>Method: PayPal</p>
         </div>
-        <div class="details">
+        <div class="order-details">
           <h1>ORDER ITEMS</h1>
-          <ul class="list">
-            <li class="list-item">
+          <ul class="order-list">
+            <li class="order-list-item">
               <img src="./images/playstation.jpg" alt="" />
               <a href="#">iPhone 11 Pro 256GB Memory</a>
               <p>1 x $599.99 = $599.99</p>
             </li>
-            <li class="list-item">
+            <li class="order-list-item">
               <img src="./images/playstation.jpg" alt="" />
               <a href="#">iPhone 11 Pro 256GB Memory</a>
               <p>1 x $599.99 = $599.99</p>
@@ -66,8 +78,8 @@
           </ul>
         </div>
       </div>
-      <div class="right">
-        <ul>
+      <div class="OrderSummary">
+        <ul class="checkout">
           <h1>ORDER SUMMARY</h1>
           <li>Items : <span> $649.98</span></li>
           <li>Shipping : <span> $649.98</span></li>

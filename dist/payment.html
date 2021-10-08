@@ -16,41 +16,25 @@
     <title>Document</title>
   </head>
   <body>
-    <nav id="navbar">
-      <div class="logo">
-        <a href="index.html"><h1>PROSHOP</h1></a>
-      </div>
-      <div class="serachbar">
-        <input type="text" placeholder="Search Product" />
-        <input type="submit" class="search_btn" />
-      </div>
-      <a href="index.html"><i class="fas fa-shopping-cart"></i> CART</a>
-      <ul class="dropdown">
-        <li id="Profile">Name</li>
-        <ul class="dropdown-content">
-          <li><a href="">Profile</a></li>
-          <li><a href="">Logout</a></li>
-        </ul>
-      </ul>
-    </nav>
-    <section class="container payments" id="payment">
+    <section class="container payments">
       <ul class="links">
         <li><a href="shipping.html">Shipping</a></li>
-        <li class="border-bottom">Payment</li>
+        <li class="Link-border">Payment</li>
         <li>Place Order</li>
       </ul>
       <h1>PAYMENT METHOD</h1>
-
       <h2>Select Method</h2>
       <form action="">
-        <input
-          type="radio"
-          id="male"
-          name="payment"
-          value="PayPal or Credit Card"
-          checked="checked"
-        />
-        <label for="PayPal or Credit Card">PayPal or Credit Card</label>
+        <form-control>
+          <input
+            type="radio"
+            id="male"
+            name="payment"
+            value="PayPal or Credit Card"
+            checked="checked"
+          />
+          <label for="PayPal or Credit Card">PayPal or Credit Card</label>
+        </form-control>
 
         <input type="submit" class="btn" value="Continue" />
         <a href="placeorder.html">next Link</a>

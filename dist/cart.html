@@ -18,29 +18,41 @@
   <body>
     <nav id="navbar">
       <div class="logo">
-        <a href="index.html"><h1>PROSHOP</h1></a>
+        <a href="index.html"><h1>SHOP-IT</h1></a>
       </div>
       <div class="serachbar">
         <input type="text" placeholder="Search Product" />
         <input type="submit" class="search_btn" />
       </div>
-      <a href="index.html"><i class="fas fa-shopping-cart"></i> CART</a>
-      <ul class="dropdown">
-        <li id="Profile">Name</li>
+
+      <div class="links">
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART</a>
+      </div>
+      <div class="links">
+        <a href="AdminDashbord.html"> AdminDashbord</a>
+      </div>
+      <!-- <div class="links">
+
+        <a href="Auth.html"><li id="">Register/Login /</li></a>
+      </div> -->
+      <div class="dropdown-btn">
+        <div>user.name</div>
+        <button><i class="fas fa-caret-down"></i></button>
         <ul class="dropdown-content">
           <li><a href="">Profile</a></li>
+          <li><a href="./Orderstaus.html">Order</a></li>
           <li><a href="">Logout</a></li>
         </ul>
-      </ul>
+      </div>
     </nav>
     <div id="cart">
       <div class="container">
         <h1>SHOPPING CART</h1>
 
-        <ul class="list">
-          <li class="list-item">
+        <ul class="Product-list">
+          <li class="Product-list-item">
             <img src="./images/playstation.jpg" alt="" />
-            <a href="#">iPhone 11 Pro 256GB Memory</a>
+            <a href="../dist/productDetails.html">iPhone 11 Pro 256GB Memory</a>
             <p>$599.99</p>
             <div class="quntity">
               <label>Qty</label>
@@ -60,9 +72,11 @@
             </div>
             <a href="" class="btn"><i class="fas fa-trash"></i></a>
           </li>
-          <li class="list-item">
-            <img src="./images/playstation.jpg" alt="" />
-            <a href="#">iPhone 11 Pro 256GB Memory</a>
+          <li class="Product-list-item">
+            <img src="./images/airpods.jpg" alt="" />
+            <a href="../dist/productDetails.html"
+              >Loooooooooooooooooooooooooooooooooooooooooooooong Name</a
+            >
             <p>$599.99</p>
             <div class="quntity">
               <label>Qty</label>
